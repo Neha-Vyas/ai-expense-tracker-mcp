@@ -1,0 +1,2 @@
+pyproject.toml = what my project needs
+uv.lock = exactly what was installed/resolved
