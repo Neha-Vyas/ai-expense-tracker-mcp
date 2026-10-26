@@ -21,16 +21,19 @@ def expense_categories():
         return json.load(file)
 
     
-def get_connection():
-    return psycopg.connect(
-        dbname="expense_tracker",
-        user="postgres",
-        password=os.getenv("PG_PASSWORD"),
-        host="localhost",
-        port=5432
-    )
+# def get_connection():
+#     return psycopg.connect(
+#         dbname="expense_tracker",
+#         user="postgres",
+#         password=os.getenv("PG_PASSWORD"),
+#         host="localhost",
+#         port=5432
+#     )
 # Whenever our MCP tool needs PostgreSQL, call get_connection() to get a database connection.
 
+# on supbase
+def get_connection():
+    return psycopg.connect(os.getenv("DATABASE_URL"))
 @mcp.tool()
 # “The function immediately below this decorator should be exposed as an MCP tool.”  
 def add_expense(
