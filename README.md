@@ -113,3 +113,7 @@ Later, we will build our **own Python MCP client** and connect it to an LLM.
 * Monthly summaries
 * Budget insights
 * Natural-lan
+
+
+
+One more important thing: MCP itself does not require AI. MCP is a protocol for exposing and calling tools. An AI model is one possible client, but a normal Python program can also be an MCP client.
